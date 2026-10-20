@@ -20,7 +20,7 @@ public enum Direction {
     /**
      * West, or left.
      */
-    WEST(-1, 0),
+    WEST(- 1, 0),
 
     /**
      * East, or right.

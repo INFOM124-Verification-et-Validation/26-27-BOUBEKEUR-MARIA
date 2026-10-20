@@ -1,37 +1,29 @@
 package nl.tudelft.jpacman.board;
-
-import static org.assertj.core.api.Assertions.assertThat;
-
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/**
- * A very simple (and not particularly useful)
- * test class to have a starting point where to put tests.
- *
- * @author Arie van Deursen
- */
-class DirectionTest {
-
-    /**
-     * Do we get the correct delta when moving north?
-     */
+public class DirectionTest {
     @Test
-    void testNorth() {
-        // TODO
+    void northTest() {
+        assertEquals(0, Direction.NORTH.getDeltaX());
+        assertEquals(-1, Direction.NORTH.getDeltaY());
+    }
+    @Test
+    void southTest() {
+        assertEquals(0, Direction.SOUTH.getDeltaX());
+        assertEquals(1, Direction.SOUTH.getDeltaY());
+    }
+    @Test
+    void westTest() {
+        assertEquals(-1, Direction.WEST.getDeltaX());
+        assertEquals(0, Direction.WEST.getDeltaY());
+    }
+    @Test
+    void eastTest() {
+        assertEquals(1, Direction.EAST.getDeltaX());
+        assertEquals(0, Direction.EAST.getDeltaY());
     }
 
-    @Test
-    void testSouth() {
-        // TODO
-    }
 
-    @Test
-    void testEast() {
-        // TODO
-    }
 
-    @Test
-    void testWest() {
-        // TODO
-    }
 }
